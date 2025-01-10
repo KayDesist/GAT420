@@ -43,6 +43,9 @@
     <ClInclude Include="Source\Cells.h">
       <Filter>Source\AI</Filter>
     </ClInclude>
+    <ClInclude Include="Source\GOLScene.h">
+      <Filter>Source\AI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Input.cpp">
@@ -65,6 +68,12 @@
     </ClCompile>
     <ClCompile Include="Source\CAScene.cpp">
       <Filter>Source\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GOLScene.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

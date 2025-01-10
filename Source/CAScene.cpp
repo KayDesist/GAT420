@@ -1,8 +1,8 @@
 #include "CAScene.h"
 #include "Random.h" 
 
-color_t white{ 255,255,255,255 }; 
-color_t black{ 0,0,0,0 }; 
+const color_t white{ 255,255,255,255 }; 
+const color_t black{ 0,0,0,0 }; 
 
 
 bool CAScene::Initialize()
@@ -20,25 +20,11 @@ bool CAScene::Initialize()
 }
 
 void CAScene::Update()
-{ 
-	m_time.Tick(); 
-	m_input.Update(); 
-
-	SDL_Event event; 
-	while (SDL_PollEvent(&event))
-	{
-		if (event.type == SDL_QUIT)
-		{
-			m_quit = true; 
-		} 
-		if (event.type == SDL_KEYDOWN && event.key.keysym.sym == SDLK_ESCAPE)
-		{
-			m_quit = true;
-		}
-	} 
+{  
+	Scene::Update();
 
 	m_Cells->Write(m_Cells->m_width / 2, 0, 1); 
-	int rule = 30; 
+	int rule = 225; 
 	for (int y = 0; y < m_Cells->m_height - 1; y++) {
 		for (int x = 1; x < m_Cells->m_width - 1; x++) {
 			int i = 0;//0-7 
